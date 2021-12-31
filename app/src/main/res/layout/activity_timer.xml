@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context=".TimerActivity">
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:text="@string/judul_timer"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/label_timer_hour_minute"
+        android:textSize="80sp" />
+
+    <Button
+        android:id="@+id/buttonPlayPause"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="7dp"
+        android:drawableLeft="@drawable/pause_icon_24"
+        android:onClick="pauseTimer"
+        android:text="@string/tombol_pause" />
+
+    <Button
+        android:id="@+id/buttonStop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="7dp"
+        android:drawableLeft="@drawable/stop_icon_24"
+        android:onClick="stopTimer"
+        android:text="@string/tombol_stop" />
+
+    <ImageView
+        android:id="@+id/imageViewSound"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:onClick="muteSound"
+        app:srcCompat="@drawable/unmute_icon_24" />
+</LinearLayout>

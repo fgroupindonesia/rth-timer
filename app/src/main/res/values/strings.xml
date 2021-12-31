@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">RTH Timer</string>
+    <string name="app_desc">Aplikasi penunjang pencatatan waktu bersama therapist Rumah Terapi Herbal</string>
+    <string name="judul_menu_utama">Menu Utama</string>
+    <string name="judul_timer">Timer</string>
+    <string name="judul_riwayat_timer">Riwayat Timer</string>
+    <string name="judul_lanjut_therapy">Lanjutkan ke Therapy?</string>
+    <string name="judul_langsung_therapy">Langsung Therapy</string>
+
+    <string name="judul_diagnosa_konsultasi">Diagnosa &amp; Konsultasi</string>
+    <string name="sub_judul_durasi_diagnosa">Durasi Diagnosa &amp; Konsultasi</string>
+    <string name="sub_judul_durasi_therapy">Durasi Therapy</string>
+    <string name="label_satuan">Satuan : </string>
+    <string name="label_ya">Ya</string>
+    <string name="label_tidak">Tidak</string>
+    <string name="label_therapy">Therapy : </string>
+    <string name="label_pasien_abcd_lanjut">Pasien ABCD akan berlanjut ke tahapan Therapy.</string>
+    <string name="label_nama_pasien">Nama Pasien : </string>
+    <string name="label_lanjut_therapy">Lanjut Therapy setelah diagnosa usai</string>
+    <string name="label_timer_hour_minute">00:00:00</string>
+    <string name="tombol_mulai_diagnosa">Mulai Diagnosa &amp; Konsultasi</string>
+    <string name="tombol_langsung_therapi">Langsung Therapy</string>
+    <string name="tombol_riwayat_timer">Riwayat Timer</string>
+    <string name="tombol_mulai">Mulai</string>
+    <string name="tombol_pause">Pause</string>
+    <string name="tombol_stop">Stop</string>
+    <string name="tombol_play">Play</string>
+
+    <string-array name="opsi_therapy">
+        <item>Hijamah</item>
+        <item>Gurah</item>
+        <item>Topung</item>
+        <item>Moxa</item>
+        <item>Elektrik</item>
+        <item>Ruqyah</item>
+    </string-array>
+    <string-array name="satuan">
+        <item>Menit</item>
+        <item>Jam</item>
+    </string-array>
+    <string-array name="durasi_angka">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>15</item>
+        <item>20</item>
+        <item>25</item>
+        <item>30</item>
+        <item>45</item>
+        <item>50</item>
+    </string-array>
+
+</resources>
