@@ -10,6 +10,7 @@
     <string name="judul_diagnosa_konsultasi">Diagnosa &amp; Konsultasi</string>
     <string name="sub_judul_durasi_diagnosa">Durasi Diagnosa &amp; Konsultasi</string>
     <string name="sub_judul_durasi_therapy">Durasi Therapy</string>
+    <string name="hint_nama_pasien">Tulis nama disini</string>
     <string name="label_satuan">Satuan : </string>
     <string name="label_ya">Ya</string>
     <string name="label_tidak">Tidak</string>
@@ -25,6 +26,7 @@
     <string name="tombol_pause">Pause</string>
     <string name="tombol_stop">Stop</string>
     <string name="tombol_play">Play</string>
+    <string name="tombol_clear_all_history">Delete Semua Riwayat</string>
 
     <string-array name="opsi_therapy">
         <item>Hijamah</item>

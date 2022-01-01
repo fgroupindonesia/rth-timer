@@ -35,7 +35,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/stroke"
             android:orientation="horizontal">
 
             <Spinner
@@ -46,7 +45,7 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="80dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:text="@string/label_satuan" />
 
@@ -65,7 +64,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/stroke"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -79,8 +77,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="40dp"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:text="Name" />
+                android:hint="@string/hint_nama_pasien"
+                android:inputType="textPersonName" />
 
         </LinearLayout>
 
@@ -92,7 +90,6 @@
             android:layout_marginTop="20dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="20dp"
-            android:background="@drawable/stroke"
             android:gravity="center"
             android:orientation="horizontal">
 
@@ -107,27 +104,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:entries="@array/opsi_therapy" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/linearLayoutLanjutTherapy"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginBottom="20dp"
-            android:background="@drawable/stroke"
-            android:gravity="center"
-            android:orientation="horizontal">
-
-            <CheckBox
-                android:id="@+id/checkBoxLanjutTherapy"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/label_lanjut_therapy" />
 
         </LinearLayout>
 

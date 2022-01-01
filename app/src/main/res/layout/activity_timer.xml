@@ -27,6 +27,15 @@
         android:text="@string/label_timer_hour_minute"
         android:textSize="80sp" />
 
+    <TextView
+        android:id="@+id/textViewTimerMili"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="20dp"
+        android:gravity="center|right"
+        android:text="@string/label_timer_hour_minute"
+        android:textSize="18sp" />
+
     <Button
         android:id="@+id/buttonPlayPause"
         android:layout_width="100dp"

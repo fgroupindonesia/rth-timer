@@ -6,9 +6,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.rth.timer.reference.Mode;
+
 public class MainActivity extends AppCompatActivity {
 
-    final int MODE_DIAGNOSA = 1, MODE_LANGSUNG_THERAPY = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,17 +18,17 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openMulaiDiagnosa(View v){
-        openSetOptions(MODE_DIAGNOSA);
+        openSetOptions(Mode.MODE_DIAGNOSA);
     }
 
     public void openLangsungTherapy(View v){
-        openSetOptions(MODE_LANGSUNG_THERAPY);
+        openSetOptions(Mode.MODE_LANGSUNG_THERAPY);
     }
 
     private void openSetOptions(int modeNa){
 
         Intent i = new Intent(this, SetOptionsActivity.class);
-        if(modeNa == MODE_DIAGNOSA) {
+        if(modeNa == Mode.MODE_DIAGNOSA) {
             i.putExtra("layout", "diagnosa");
         } else {
             i.putExtra("layout", "therapy");

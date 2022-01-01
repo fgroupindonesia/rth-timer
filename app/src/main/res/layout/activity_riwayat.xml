@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".RiwayatActivity">
 
     <TextView
@@ -26,7 +28,24 @@
         android:layout_marginTop="7dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="7dp"
+        android:layout_weight="1"
+        android:clickable="false"
+        android:editable="false"
         android:ems="10"
+        android:focusable="false"
         android:gravity="start|top"
-        android:inputType="textMultiLine" />
+        android:inputType="textMultiLine"
+        android:lines="20"
+        android:longClickable="false"
+        android:minLines="5"
+        android:scrollbars="vertical"
+        android:scrollHorizontally="false" />
+
+    <Button
+        android:id="@+id/buttonClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@drawable/clear_history_icon_24"
+        android:onClick="clearAll"
+        android:text="@string/tombol_clear_all_history" />
 </LinearLayout>
