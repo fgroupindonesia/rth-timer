@@ -1,7 +1,9 @@
 package com.rth.timer;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -10,6 +12,7 @@ import android.widget.EditText;
 import com.google.gson.Gson;
 import com.rth.timer.dbops.DataRiwayat;
 import com.rth.timer.dbops.InternalDatabase;
+import com.rth.timer.helper.ShowDialog;
 
 public class RiwayatActivity extends AppCompatActivity {
 
@@ -32,16 +35,60 @@ public class RiwayatActivity extends AppCompatActivity {
             String jsonAll = new Gson().toJson(db.getDataHistory());
             renderData(jsonAll);
         }else{
-
+            buttonClear.setEnabled(false);
             editTextTextRiwayatTimer.setText("no data riwayat from timer yet!");
         }
 
     }
 
+    boolean inginClear = false;
     public void clearAll(View v){
-        buttonClear.setEnabled(false);
-        db.clearDataHistory();
-        editTextTextRiwayatTimer.setText("no data riwayat from timer yet!");
+
+        if(db.getDataHistory().length>0){
+
+            showDialogYesNoExit();
+
+        }
+
+    }
+
+    private void showDialogYesNoExit(){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+
+        builder.setTitle("Konfirmasi");
+        builder.setMessage("Apakah anda yakin ingin membersihkan seluruh data riwayat?");
+
+        builder.setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+
+            public void onClick(DialogInterface dialog, int which) {
+
+                clearAllDataHistory();
+                dialog.dismiss();
+            }
+        });
+
+        builder.setNegativeButton("Tidak", new DialogInterface.OnClickListener() {
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // Do nothing
+                dialog.dismiss();
+            }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+
+    }
+
+    private void clearAllDataHistory(){
+
+            buttonClear.setEnabled(false);
+            db.clearDataHistory();
+            editTextTextRiwayatTimer.setText("no data riwayat from timer yet!");
+
     }
 
     private String humanDate(String computerDate){

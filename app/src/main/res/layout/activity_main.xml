@@ -18,51 +18,84 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
-    <Button
-        android:id="@+id/buttonMulaiDiagnosa"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="7dp"
-        android:drawableLeft="@drawable/bubble_icon_24"
-        android:onClick="openMulaiDiagnosa"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"
-        android:text="@string/tombol_mulai_diagnosa" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
 
-    <Button
-        android:id="@+id/buttonLangsungTherapy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="7dp"
-        android:drawableLeft="@drawable/heart_icon_24"
-        android:onClick="openLangsungTherapy"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"
-        android:text="@string/tombol_langsung_therapi" />
+        <Button
+            android:id="@+id/buttonLangsungTherapy"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:background="@drawable/corner_radius"
+            android:drawableLeft="@drawable/heart_icon_24"
+            android:onClick="openLangsungTherapy"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp"
+            android:text="@string/tombol_langsung_therapi"
+            android:textColor="@android:color/background_light" />
 
-    <Button
-        android:id="@+id/buttonRiwayatTimer"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="7dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginBottom="7dp"
-        android:drawableLeft="@drawable/stats_icon_24"
-        android:onClick="openRiwayat"
-        android:paddingLeft="20dp"
-        android:paddingTop="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="20dp"
-        android:text="@string/tombol_riwayat_timer" />
+        <Button
+            android:id="@+id/buttonMulaiDiagnosa"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:background="@drawable/corner_radius"
+            android:drawableLeft="@drawable/bubble_icon_24"
+            android:onClick="openMulaiDiagnosa"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp"
+            android:text="@string/tombol_mulai_diagnosa"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/buttonSetting"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:background="@drawable/corner_radius"
+            android:drawableLeft="@drawable/config_icon_24"
+            android:onClick="openSettingan"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp"
+            android:text="@string/tombol_setting"
+            android:textColor="@android:color/background_light" />
+
+        <Button
+            android:id="@+id/buttonRiwayatTimer"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="2"
+            android:background="@drawable/corner_radius"
+            android:drawableLeft="@drawable/stats_icon_24"
+            android:onClick="openRiwayat"
+            android:paddingLeft="30dp"
+            android:paddingTop="20dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="20dp"
+            android:text="@string/tombol_riwayat_timer"
+            android:textColor="@android:color/background_light" />
+    </LinearLayout>
+
 </LinearLayout>

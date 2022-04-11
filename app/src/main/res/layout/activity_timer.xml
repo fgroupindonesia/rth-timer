@@ -44,9 +44,13 @@
         android:layout_marginTop="7dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="7dp"
+        android:background="@drawable/corner_radius"
         android:drawableLeft="@drawable/pause_icon_24"
         android:onClick="pauseTimer"
-        android:text="@string/tombol_pause" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/tombol_pause"
+        android:textColor="@android:color/background_light" />
 
     <Button
         android:id="@+id/buttonStop"
@@ -56,9 +60,13 @@
         android:layout_marginTop="7dp"
         android:layout_marginRight="20dp"
         android:layout_marginBottom="7dp"
+        android:background="@drawable/corner_radius"
         android:drawableLeft="@drawable/stop_icon_24"
         android:onClick="stopTimer"
-        android:text="@string/tombol_stop" />
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="@string/tombol_stop"
+        android:textColor="@android:color/background_light" />
 
     <ImageView
         android:id="@+id/imageViewSound"

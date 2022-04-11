@@ -40,4 +40,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(this, RiwayatActivity.class);
         startActivity(i);
     }
+
+    public void openSettingan(View v){
+        Intent i = new Intent(this, SettingsActivity.class);
+        startActivity(i);
+    }
 }

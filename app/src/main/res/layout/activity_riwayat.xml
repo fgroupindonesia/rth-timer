@@ -45,6 +45,9 @@
         android:id="@+id/buttonClear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="20dp"
         android:drawableLeft="@drawable/clear_history_icon_24"
         android:onClick="clearAll"
         android:text="@string/tombol_clear_all_history" />

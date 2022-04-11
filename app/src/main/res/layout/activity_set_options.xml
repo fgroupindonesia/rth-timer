@@ -109,14 +109,22 @@
 
         <Button
             android:id="@+id/buttonMulai"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal|center_vertical"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="7dp"
             android:layout_marginRight="20dp"
             android:layout_marginBottom="7dp"
+            android:background="@drawable/corner_radius"
             android:drawableLeft="@drawable/play_icon_24"
+            android:gravity="center|center_horizontal|center_vertical"
             android:onClick="mulaiTimer"
-            android:text="@string/tombol_mulai" />
+            android:paddingLeft="10dp"
+            android:paddingTop="20dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:text="@string/tombol_mulai"
+            android:textColor="@android:color/background_light" />
     </LinearLayout>
 </LinearLayout>

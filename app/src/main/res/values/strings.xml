@@ -6,7 +6,6 @@
     <string name="judul_riwayat_timer">Riwayat Timer</string>
     <string name="judul_lanjut_therapy">Lanjutkan ke Therapy?</string>
     <string name="judul_langsung_therapy">Langsung Therapy</string>
-
     <string name="judul_diagnosa_konsultasi">Diagnosa &amp; Konsultasi</string>
     <string name="sub_judul_durasi_diagnosa">Durasi Diagnosa &amp; Konsultasi</string>
     <string name="sub_judul_durasi_therapy">Durasi Therapy</string>
@@ -15,14 +14,18 @@
     <string name="label_ya">Ya</string>
     <string name="label_tidak">Tidak</string>
     <string name="label_therapy">Therapy : </string>
+    <string name="label_pengaturan_kapan">Pengaturan kapan audio narrator bersuara? </string>
     <string name="label_pasien_abcd_lanjut">Pasien ABCD akan berlanjut ke tahapan Therapy.</string>
     <string name="label_nama_pasien">Nama Pasien : </string>
     <string name="label_lanjut_therapy">Lanjut Therapy setelah diagnosa usai</string>
     <string name="label_timer_hour_minute">00:00:00</string>
-    <string name="tombol_mulai_diagnosa">Mulai Diagnosa &amp; Konsultasi</string>
+    <string name="label_audio_per5">Audio per 5 menit </string>
+    <string name="label_audio_per10">Audio per 10 menit </string>
+    <string name="tombol_mulai_diagnosa">Mulai Diagnosa</string>
     <string name="tombol_langsung_therapi">Langsung Therapy</string>
+    <string name="tombol_setting">Setting Aplikasi</string>
     <string name="tombol_riwayat_timer">Riwayat Timer</string>
-    <string name="tombol_mulai">Mulai</string>
+    <string name="tombol_mulai">Mulai Timer</string>
     <string name="tombol_pause">Pause</string>
     <string name="tombol_stop">Stop</string>
     <string name="tombol_play">Play</string>
@@ -35,6 +38,9 @@
         <item>Moxa</item>
         <item>Elektrik</item>
         <item>Ruqyah</item>
+        <item>Dzikir</item>
+        <item>Fashdu</item>
+        <item>Workout</item>
     </string-array>
     <string-array name="satuan">
         <item>Menit</item>
