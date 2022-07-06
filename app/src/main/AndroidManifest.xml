@@ -12,7 +12,8 @@
         android:theme="@style/AppTheme">
         <activity android:name=".SettingsActivity"></activity>
         <activity android:name=".RiwayatActivity" />
-        <activity android:name=".TimerActivity" />
+        <activity android:name=".TimerActivity"
+            android:screenOrientation="portrait"  />
         <activity
             android:name=".SetOptionsActivity"
             android:noHistory="true" />
