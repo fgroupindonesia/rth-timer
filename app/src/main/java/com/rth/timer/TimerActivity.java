@@ -6,6 +6,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.SystemClock;
@@ -17,8 +18,10 @@ import android.widget.TextView;
 
 import com.rth.timer.dbops.DataRiwayat;
 import com.rth.timer.dbops.InternalDatabase;
+import com.rth.timer.helper.UIHelper;
 import com.rth.timer.reference.Mode;
 
+import java.io.File;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -28,7 +31,7 @@ public class TimerActivity extends AppCompatActivity {
     Handler handler = new Handler(), handler2 = new Handler();
     Runnable r, r2;
     TextView textViewTimer, textViewTimerMili;
-    MediaPlayer mplayer;
+    MediaPlayer mplayer, mplayerMusic;
     ImageView imageViewSound;
 
     final int equalToMilSec = 1000;
@@ -73,6 +76,12 @@ public class TimerActivity extends AppCompatActivity {
             aksiSaatIni = bundle.getInt("MODE");
         }
 
+
+        centerTitle();
+    }
+
+    private void centerTitle(){
+        UIHelper.centerTitle(this);
     }
 
     private void keepOn() {
@@ -455,6 +464,57 @@ public class TimerActivity extends AppCompatActivity {
             satuanWaktuAfter = satuanWaktu;
             mplayer.setOnCompletionListener(completeListener);
             mplayer.start();
+        }
+
+    }
+
+    String pathMusicFolder;
+    String pathMusicLocal;
+
+    private void downloadMusicFile(){
+
+    }
+
+
+
+    private boolean isMusicExist(){
+        boolean ada = false;
+
+        // check the file location locally
+        File lokasiFolderMusic = new File(pathMusicFolder);
+
+        ada = lokasiFolderMusic.exists();
+
+        if(!ada){
+            // create dulu folderna
+            lokasiFolderMusic.mkdirs();
+        }
+
+        File lokasiMusic = new File(pathMusicLocal);
+
+        ada = lokasiMusic.exists();
+
+        // last the status of the file
+        return ada;
+    }
+
+    private void playMusic(boolean startNow) {
+
+        if (mplayerMusic != null) {
+            mplayerMusic.release();
+        }
+
+        if(startNow) {
+
+            mplayerMusic = MediaPlayer.create(this, Uri.parse(pathMusicLocal));
+
+            if (mplayerMusic != null) {
+                mplayerMusic.start();
+            }
+
+        }else{
+            if(mplayerMusic!=null)
+            mplayerMusic.stop();
         }
 
     }

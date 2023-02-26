@@ -15,13 +15,22 @@ import static android.content.Context.MODE_PRIVATE;
 public class InternalDatabase {
 
     public static final String KEY_PASIEN ="pasien", KEY_DATA_RIWAYAT = "history",
-    KEY_TREATMENT = "treatment", KEY_TIME_AUDIO_NARRATOR = "waktu";;
+    KEY_TREATMENT = "treatment", KEY_TIME_AUDIO_NARRATOR = "waktu",
+    KEY_PASSWORD = "password";
+
     Context appContext;
     SharedPreferences sharedPreferences;
 
     public InternalDatabase(Context app){
         sharedPreferences  = PreferenceManager.getDefaultSharedPreferences(app);
         appContext = app;
+    }
+
+    public void setPass(String data){
+        // either 5min or 10min
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_PASSWORD, data);
+        editor.commit();
     }
 
     public void setTimeAudioNarrator(String name){
@@ -47,6 +56,10 @@ public class InternalDatabase {
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putString(KEY_DATA_RIWAYAT, "");
         editor.commit();
+    }
+
+    public String getPass(){
+        return sharedPreferences.getString(KEY_PASSWORD,null);
     }
 
     public String getTimeAudioNarrator(){

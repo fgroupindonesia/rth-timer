@@ -15,12 +15,15 @@
     <string name="label_tidak">Tidak</string>
     <string name="label_therapy">Therapy : </string>
     <string name="label_pengaturan_kapan">Pengaturan kapan audio narrator bersuara? </string>
+    <string name="label_pengaturan_pass_riwayat">Pengaturan kata kunci delete riwayat </string>
+
     <string name="label_pasien_abcd_lanjut">Pasien ABCD akan berlanjut ke tahapan Therapy.</string>
     <string name="label_nama_pasien">Nama Pasien : </string>
     <string name="label_lanjut_therapy">Lanjut Therapy setelah diagnosa usai</string>
     <string name="label_timer_hour_minute">00:00:00</string>
     <string name="label_audio_per5">Audio per 5 menit </string>
     <string name="label_audio_per10">Audio per 10 menit </string>
+    <string name="label_pass_delete_riwayat">Password Riwayat</string>
     <string name="tombol_mulai_diagnosa">Mulai Diagnosa</string>
     <string name="tombol_langsung_therapi">Langsung Therapy</string>
     <string name="tombol_setting">Setting Aplikasi</string>

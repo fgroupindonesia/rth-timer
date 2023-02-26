@@ -10,17 +10,23 @@
         android:roundIcon="@mipmap/ic_launcher2"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingsActivity"></activity>
-        <activity android:name=".RiwayatActivity" />
+        <activity android:name=".SettingsActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RiwayatActivity"
+            android:screenOrientation="portrait" />
         <activity android:name=".TimerActivity"
             android:screenOrientation="portrait"  />
         <activity
             android:name=".SetOptionsActivity"
-            android:noHistory="true" />
-        <activity android:name=".MainActivity" />
+            android:noHistory="true"
+            android:screenOrientation="portrait" />
+
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".LogoActivity"
-            android:noHistory="true">
+            android:noHistory="true"
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

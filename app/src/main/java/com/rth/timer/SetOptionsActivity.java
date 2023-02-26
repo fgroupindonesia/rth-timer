@@ -16,6 +16,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.rth.timer.dbops.InternalDatabase;
+import com.rth.timer.helper.UIHelper;
 import com.rth.timer.reference.Mode;
 
 public class SetOptionsActivity extends AppCompatActivity {
@@ -46,6 +47,8 @@ public class SetOptionsActivity extends AppCompatActivity {
 
          linearLayoutTherapy = (LinearLayout) findViewById(R.id.linearLayoutTherapy);
 
+         centerTitle();
+
         Bundle bundle = getIntent().getExtras();
         if (bundle != null) {
            String jenisLayout = bundle.getString("layout");
@@ -72,6 +75,10 @@ public class SetOptionsActivity extends AppCompatActivity {
 
         hidingKeyboardOnTherapySpinner();
 
+    }
+
+    private void centerTitle(){
+        UIHelper.centerTitle(this);
     }
 
     private void hidingKeyboardOnTherapySpinner(){

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.text.method.PasswordTransformationMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -13,6 +14,7 @@ import com.google.gson.Gson;
 import com.rth.timer.dbops.DataRiwayat;
 import com.rth.timer.dbops.InternalDatabase;
 import com.rth.timer.helper.ShowDialog;
+import com.rth.timer.helper.UIHelper;
 
 public class RiwayatActivity extends AppCompatActivity {
 
@@ -39,20 +41,83 @@ public class RiwayatActivity extends AppCompatActivity {
             editTextTextRiwayatTimer.setText("no data riwayat from timer yet!");
         }
 
+        centerTitle();
+
     }
 
-    boolean inginClear = false;
+    private void centerTitle(){
+        UIHelper.centerTitle(this);
+    }
+
+    EditText editText;
+    String passEntered;
+
+   private void displayPopupPassRequest(){
+
+
+           AlertDialog.Builder builder = new AlertDialog.Builder(RiwayatActivity.this);
+           builder.setTitle("Password");
+
+           editText = new EditText(this);
+           editText.setTransformationMethod(PasswordTransformationMethod.getInstance());
+
+           builder.setView(editText);
+
+           // Set up the buttons
+           builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+               @Override
+               public void onClick(DialogInterface dialog, int which) {
+                   dialog.dismiss();
+                   passEntered = editText.getText().toString();
+
+                   if(db.getPass()!=null){
+                       if(db.getPass().equals(passEntered)){
+                           allowClear = true;
+                           confirmClear();
+                       }else{
+                           ShowDialog.message(RiwayatActivity.this, "Password missmatch!");
+                       }
+                   }
+
+               }
+           });
+           builder.setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+               @Override
+               public void onClick(DialogInterface dialog, int which) {
+
+                dialog.cancel();
+               }
+           });
+
+           builder.show();
+       }
+
+    boolean allowClear = false;
+
     public void clearAll(View v){
 
-        if(db.getDataHistory().length>0){
-
-            showDialogYesNoExit();
-
+        if(db.getPass() == null){
+            allowClear = true;
+        }else{
+            // showing the input pass request
+            displayPopupPassRequest();
         }
+
+      confirmClear();
 
     }
 
-    private void showDialogYesNoExit(){
+    private void confirmClear(){
+        if(allowClear) {
+            if (db.getDataHistory().length > 0) {
+
+                showDialogYesNoClear();
+
+            }
+        }
+    }
+
+    private void showDialogYesNoClear(){
 
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
 
