@@ -93,4 +93,68 @@
             android:onClick="lockPasswordProtection"
             android:text="@string/label_pass_delete_riwayat" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/label_pengaturan_audio_mp3"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/audio_mp3_24" />
+
+        <Spinner
+            android:id="@+id/spinnerAudioMp3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/opsi_audio_mp3" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBarDownload"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:visibility="visible" />
+
+    <LinearLayout
+        android:id="@+id/linearAudioControl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/buttonPause"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_radius"
+            android:onClick="pauseMp3"
+            android:src="@drawable/pause_icon_24"/>
+
+        <ImageButton
+            android:id="@+id/buttonPlay"
+            android:layout_width="45dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/corner_radius"
+            android:src="@drawable/play_icon_24"
+            android:onClick="playMp3" />
+    </LinearLayout>
+
 </LinearLayout>

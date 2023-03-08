@@ -16,7 +16,7 @@ public class InternalDatabase {
 
     public static final String KEY_PASIEN ="pasien", KEY_DATA_RIWAYAT = "history",
     KEY_TREATMENT = "treatment", KEY_TIME_AUDIO_NARRATOR = "waktu",
-    KEY_PASSWORD = "password";
+    KEY_PASSWORD = "password", KEY_AUDIO_MP3  = "mp3";
 
     Context appContext;
     SharedPreferences sharedPreferences;
@@ -24,6 +24,12 @@ public class InternalDatabase {
     public InternalDatabase(Context app){
         sharedPreferences  = PreferenceManager.getDefaultSharedPreferences(app);
         appContext = app;
+    }
+
+    public void setMp3(String terpilih){
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_AUDIO_MP3, terpilih);
+        editor.commit();
     }
 
     public void setPass(String data){
@@ -57,6 +63,11 @@ public class InternalDatabase {
         editor.putString(KEY_DATA_RIWAYAT, "");
         editor.commit();
     }
+
+    public String getMp3(){
+        return sharedPreferences.getString(KEY_AUDIO_MP3,null);
+    }
+
 
     public String getPass(){
         return sharedPreferences.getString(KEY_PASSWORD,null);

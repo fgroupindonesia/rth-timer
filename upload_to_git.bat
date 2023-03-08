@@ -1,4 +1,4 @@
 git add .
-git commit -m "RTH Timer now have some options to access Audio Workout through Apps."
+git commit -m "RTH Timer update Audio Workout spinner fix!"
 git push origin main
 git gc --prune

@@ -16,6 +16,7 @@
     <string name="label_therapy">Therapy : </string>
     <string name="label_pengaturan_kapan">Pengaturan kapan audio narrator bersuara? </string>
     <string name="label_pengaturan_pass_riwayat">Pengaturan kata kunci delete riwayat </string>
+    <string name="label_pengaturan_audio_mp3">Pengaturan audio MP3</string>
 
     <string name="label_pasien_abcd_lanjut">Pasien ABCD akan berlanjut ke tahapan Therapy.</string>
     <string name="label_nama_pasien">Nama Pasien : </string>
@@ -34,6 +35,13 @@
     <string name="tombol_play">Play</string>
     <string name="tombol_clear_all_history">Delete Semua Riwayat</string>
 
+    <string name="link_empowering">https://tinyurl.com/2zvjdjvv</string>
+    <string name="link_spirit">https://tinyurl.com/2fqyacbn</string>
+    <string name="link_futuristic">https://tinyurl.com/2fo5dtpj</string>
+    <string name="link_running">https://tinyurl.com/2ljdkfll</string>
+
+
+
     <string-array name="opsi_therapy">
         <item>Hijamah</item>
         <item>Gurah</item>
@@ -45,6 +53,15 @@
         <item>Fashdu</item>
         <item>Workout</item>
     </string-array>
+
+    <string-array name="opsi_audio_mp3">
+        <item>-</item>
+        <item>Running</item>
+        <item>Futuristic</item>
+        <item>Empowering</item>
+        <item>Spirit</item>
+    </string-array>
+
     <string-array name="satuan">
         <item>Menit</item>
         <item>Jam</item>
